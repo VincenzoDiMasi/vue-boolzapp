@@ -30,24 +30,86 @@
         <div class="container my-5" id="board" >
             <div class="row h-100">
 
-                    <!-- Navbar section -->
-                <section class="col px-0 border-end border-primary" id="user-navbar">
-                    <header  class="menu-bar"></header>
-                    <div id="active-notice"></div>
-                    <div id="contact-list" class="overflow-auto"></div>
-                </section>
+          <!-- NAVBAR SECTION -->
+          <section class="col px-0 border-end border-primary" id="user-navbar">
+            <!-- HEADER -->
+            <header id="user-menu-header" class="menu-bar">
+                <div class="h-100 d-flex justyfy-content-beetwe align-items-center">
+                    <img src="img/avatar_io.jpg" alt="avatar_1" class="avatar-img">
+                    <span>Bella Bellissima</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </header>
+            <!-- ACTIVE NOTICE -->
+            <div id="active-notice" class="d-flex align-items-center p-4">
+                <i class="fa-solid fa-bell-slash"></i>
+                <div class="m-2">
+                    <p class="m-0 fw-bolder">Ricevi notifiche di nuovi messaggi</p>
+                    <span class="text-decoration-underline text-secondary">Attiva notifiche desktop</span>
+                </div>
+            </div>
+            <!-- SEARCH BAR -->
+            <div id="search-chat" class="p-2">
+                <input type="text" class="form-control p-2" placeholder="   &#128269;             Cerca o inizia una nuova chat">
+            </div>
+            <!-- CONTACT LIST -->
+            <div id="contact-list" class="overflow-auto p-3">
+                <div class="my-3 d-flex">
+                    <img src="img/avatar_1.jpg" alt="avatar_1" class="avatar-img">
+                    <span>Michele</span>
+                </div>
+                <div class="my-3 d-flex">
+                    <img src="img/avatar_2.jpg" alt="avatar_1" class="avatar-img">
+                    <span>Fabio</span>
+                </div>
+                <div class="my-3 d-flex">
+                    <img src="img/avatar_3.jpg" alt="avatar_1" class="avatar-img">
+                    <span>Samuele</span>
+                </div>
+                <div class="my-3 d-flex">
+                    <img src="img/avatar_4.jpg" alt="avatar_1" class="avatar-img">
+                    <span>Luisa</span>
+                </div>
+                
+            </div>
+        </section>
 
-                    <!-- Chat section-->
-                <section class="col-7 px-0" id="chat">
-                   <header id="chat-header" class="menu-bar"></header>
-                   <div id="chat-board" class="overflow-auto"></div>
-                   <footer id="chat-footer" class="menu-bar"></footer>
-                </section>
+           <!-- CHAT SECTION-->
+        <section class="col-7 px-0" id="chat">
+            <!-- CHAT HEADER -->
+           <header id="chat-header" class="menu-bar">
+              <div class="h-100 d-flex justyfy-content-beetwe align-items-center">
+                 <img src="img/avatar_1.jpg" alt="avatar_1" class="avatar-img">
+                 <span>Michele</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-paperclip"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+             </div>
+           </header>
+           <!-- CHAT BOARD -->
+           <div id="chat-board" class="overflow-auto"></div>
+           <!-- CHAT FOOTER -->
+           <footer id="chat-footer" class="footer-bar">
+            <i class="fa-regular fa-face-smile"></i>
+            <div class="input-group px-3">
+                <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+            </div>
+            <i class="fa-solid fa-microphone"></i>
+           </footer>
+        </section>
 
-            </div>  
-         </div>
-        
-     </div>
+    </div>  
+ </div>
+
+</div>
+</main>   
+</body>
  </main>   
 </body>
 </html>
