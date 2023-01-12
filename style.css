@@ -1,0 +1,55 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROOT */
+:root{
+    --green:#009688;
+    --grey:#D8DBD5;
+    --light-grey:#EAEAEA;
+    --light-blue:#8EDAFC;
+}
+
+/* UTILITIES */
+.container{ 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* GENERICS */
+body{
+    font-family: sans-serif;
+    background-image: linear-gradient(var(--green) 30%, var(--grey) 15%);
+    height: 100vh;
+}
+
+/* MAIN */
+#board{
+    height:700px;
+    background-color: white;
+}
+
+.menu-bar{
+   height: 70px;
+   background-color: var(--light-grey);
+   position: sticky;
+}
+
+/* NAVBAR SECTION */
+#active-notice{
+   height: 80px;
+   background-color: var(--light-blue);
+}
+
+#contact-list{
+    height: 550px;
+}
+
+/* CHAT SECTION */
+#chat-board{
+    background-image: url(img/mine.jpg);
+    height: 560px;
+}
