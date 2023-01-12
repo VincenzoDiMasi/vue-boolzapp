@@ -78,10 +78,35 @@ i{
      height: 480px;
  }
 
+ .slctd:hover {
+    background-color: var(--light-grey);
+    cursor: pointer;
+ }
+
 /* CHAT SECTION */
 #chat-board{
     background-image: url(img/mine.jpg);
     height: 560px;
+}
+
+.msg-box{
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    padding: 15px;
+}
+
+.sent{
+    background-color: #D5F9BA ;
+    align-self: flex-end;
+}
+
+.received{
+    background-color: white;
 }
 
 .footer-bar{
