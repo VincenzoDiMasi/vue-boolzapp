@@ -97,7 +97,7 @@
                 <footer id="chat-footer" class="footer-bar">
                     <i class="fa-regular fa-face-smile"></i>
                     <div class="input-group px-3">
-                        <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model.trim="newMessage" @keyup.enter="addNewMessage">
                     </div>
                     <i class="fa-solid fa-microphone"></i>
                 </footer>

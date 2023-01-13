@@ -3,7 +3,8 @@ console.log('Vue OK', Vue);
 const app = Vue.createApp({
     data(){
         return {
-            selectedIndex: 0,  
+            selectedIndex: 0, 
+            newMessage: '', 
 
             user: {
                 name: 'Nome Utente',
@@ -103,7 +104,31 @@ const app = Vue.createApp({
             },
             getLastIndex(index){
                 return this.contacts[index].messages.length -1;
-            }
+            },
+            addNewMessage(){
+                if(this.newMessage){
+                const message ={
+                    date: new Date().toLocaleString(),
+                    text: this.newMessage,
+                    status: 'sent'
+                }
+                this.contacts[this.selectedIndex].messages.push(message);
+                this.okAnswer();
+                this.newMessage = '';
+               }
+             },
+            
+             okAnswer(){
+                setTimeout (()=>{
+                    const message ={
+                        date: new Date().toLocaleString(),
+                        text: 'ok',
+                        status: 'received'
+                    }
+                    this.contacts[this.selectedIndex].messages.push(message);
+                    this.scrollDownChat()
+                },1000)
+             },
         }
     
 
