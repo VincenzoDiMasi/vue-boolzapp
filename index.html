@@ -88,8 +88,8 @@
                 <!-- CHAT BOARD -->
                 <div id="chat-board" class="overflow-auto d-flex flex-column">
 
-                    <div class=" msg-box sent">Buon Natale!</div>
-                    <div class=" msg-box received">Grazie, anche a te e famiglia!</div>
+                    <div v-for="(message,i) in contacts[selectedIndex].messages" class="msg-box" :class="message.status">{{ message.text }}<span class="send-moment">{{ message.date}}</span></div>
+                   </div>
 
                 </div>
                 <!-- CHAT FOOTER -->
