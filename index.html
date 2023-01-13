@@ -76,8 +76,8 @@
                 <!-- CHAT HEADER -->
                 <header id="chat-header" class="menu-bar">
                     <div class="h-100 d-flex justyfy-content-beetwe align-items-center">
-                        <img src="img/avatar_1.jpg" alt="avatar_1" class="avatar-img">
-                        <span>Michele</span>
+                        <img :src=`img/avatar${contacts[selectedIndex].avatar}.jpg` :alt="contacts[selectedIndex].name" class="avatar-img">
+                        <span class="fw-bolder">{{ contacts[selectedIndex].name }}</span>
                     </div>
                     <div>
                         <i class="fa-solid fa-magnifying-glass"></i>
