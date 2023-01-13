@@ -88,10 +88,12 @@
                 <!-- CHAT BOARD -->
                 <div id="chat-board" class="overflow-auto d-flex flex-column">
 
-                    <div v-for="(message,i) in contacts[selectedIndex].messages" class="msg-box" :class="message.status">{{ message.text }}<span class="send-moment">{{ message.date}}</span></div>
-                   </div>
-
+                    <div v-for="(message,i) in contacts[selectedIndex].messages" class="msg-box" :class="message.status">
+                        {{ message.text }}<span class="send-moment">{{ message.date}}</span>
+                    </div>
                 </div>
+
+                
                 <!-- CHAT FOOTER -->
                 <footer id="chat-footer" class="footer-bar">
                     <i class="fa-regular fa-face-smile"></i>
