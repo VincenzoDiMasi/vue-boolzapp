@@ -35,8 +35,8 @@
                 <!-- HEADER -->
                     <header id="user-menu-header" class="menu-bar">
                         <div class="h-100 d-flex justyfy-content-beetwe align-items-center">
-                            <img src="img/avatar_io.jpg" alt="avatar_1" class="avatar-img">
-                            <span>Bella Bellissima</span>
+                            <img :src=`img/avatar${user.avatar}.jpg` :alt="user.name" class="avatar-img">
+                            <span class="fw-bolder">{{ user.name}}</span>
                         </div>
                         <div>
                             <i class="fa-solid fa-arrows-rotate"></i>
@@ -58,24 +58,16 @@
                     </div>
                     <!-- CONTACT LIST -->
                     <div id="contact-list" class="overflow-auto p-3">
-                        <div class="my-3 py-2 d-flex slctd">
-                            <img src="img/avatar_1.jpg" alt="avatar_1" class="avatar-img">
-                            <span>Michele</span>
+                        <div v-for="(contact, i) in contacts" class="my-3 py-2 d-flex" :class="{'slctd': selectedIndex === i }" @click="changeCurrentIndex(i)">
+                            <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="avatar_1" class="avatar-img">
+                            <div class="w-100">
+                                <div class="d-flex justify-content-between px-2">
+                                    <span class="fw-bolder">{{ contact.name}} </span>
+                                    <span class="text-secondary">{{ contact.messages[getLastIndex(i)].date }}</span>
+                                </div>
+                                <div class="px-2 text-secondary">{{ contact.messages[getLastIndex(i)].text }}</div>
+                            </div>
                         </div>
-                        <div class="my-3 py-2 d-flex slctd">
-                            <img src="img/avatar_2.jpg" alt="avatar_1" class="avatar-img">
-                            <span>Fabio</span>
-                        </div>
-                        <div class="my-3 py-2 d-flex slctd">
-                            <img src="img/avatar_3.jpg" alt="avatar_1" class="avatar-img">
-                            <span>Samuele</span>
-                        </div>
-                        <div class="my-3 py-2 d-flex slctd">
-                            <img src="img/avatar_4.jpg" alt="avatar_1" class="avatar-img">
-                            <span>Luisa</span>
-                        </div>
-                        
-                        
                     </div>
                 </section>
 

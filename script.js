@@ -96,6 +96,15 @@ const app = Vue.createApp({
             }
         },
 
+
+        methods:{
+            changeCurrentIndex(index){
+               this.selectedIndex = index;
+            },
+            getLastIndex(index){
+                return this.contacts[index].messages.length -1;
+            }
+        }
     
 
     })

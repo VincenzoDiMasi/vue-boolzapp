@@ -78,10 +78,12 @@ i{
      height: 480px;
  }
 
- .slctd:hover {
+ .slctd {
     background-color: var(--light-grey);
     cursor: pointer;
  }
+
+ 
 
 /* CHAT SECTION */
 #chat-board{
