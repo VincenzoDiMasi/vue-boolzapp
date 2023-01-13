@@ -86,7 +86,7 @@
                     </div>
                 </header>
                 <!-- CHAT BOARD -->
-                <div id="chat-board" class="overflow-auto d-flex flex-column">
+                <div id="chat-board" ref="chatboard" class="overflow-auto d-flex flex-column">
 
                     <div v-for="(message,i) in contacts[selectedIndex].messages" class="msg-box" :class="message.status">
                         {{ message.text }}<span class="send-moment">{{ message.date}}</span>

@@ -91,6 +91,86 @@ const app = Vue.createApp({
                   }
                   ],
                  },
+                 {
+                    name: 'Luigi',
+                    avatar: '_4',
+                    visible: true,
+                    messages: [{
+                      date: '10/01/2020 15:30:55',
+                      text: 'Lo sai che la tachipirina 500 se ne prendi due diventa 1000?',
+                      status: 'sent'
+                    },
+                    {
+                      date: '10/01/2020 15:50:00',
+                      text: 'No, grazie.',
+                      status: 'received'
+                    }
+                    ],
+                   },
+                   {
+                    name: 'Franco',
+                    avatar: '_1',
+                    visible: true,
+                    messages: [{
+                      date: '10/01/2020 15:30:55',
+                      text: 'Lo sai che ha aperto una nuova discoteca?',
+                      status: 'sent'
+                    },
+                    {
+                      date: '10/01/2020 15:50:00',
+                      text: 'Si, ma preferirei andare al cinema',
+                      status: 'received'
+                    }
+                    ],
+                   },
+                   {
+                    name: 'Leonardo',
+                    avatar: '_2',
+                    visible: true,
+                    messages: [{
+                      date: '10/01/2020 15:30:55',
+                      text: 'Lo sai che ha aperto una nuova pescheria?',
+                      status: 'sent'
+                    },
+                    {
+                      date: '10/01/2020 15:50:00',
+                      text: 'Si, ma preferirei andare al cinema',
+                      status: 'received'
+                    }
+                    ],
+                   },
+                   {
+                    name: 'Lina',
+                    avatar: '_4',
+                    visible: true,
+                    messages: [{
+                      date: '10/01/2020 15:30:55',
+                      text: 'Quanti anni hai?',
+                      status: 'sent'
+                    },
+                    {
+                      date: '10/01/2020 15:50:00',
+                      text: '29',
+                      status: 'received'
+                    }
+                    ],
+                   },
+                   {
+                    name: 'Dino',
+                    avatar: '_3',
+                    visible: true,
+                    messages: [{
+                      date: '10/01/2020 15:30:55',
+                      text: 'Lo sai che le rose sono rosse?',
+                      status: 'sent'
+                    },
+                    {
+                      date: '10/01/2020 15:50:00',
+                      text: 'Forse',
+                      status: 'received'
+                    }
+                    ],
+                   },
               ],
 
                    
@@ -115,6 +195,7 @@ const app = Vue.createApp({
                 this.contacts[this.selectedIndex].messages.push(message);
                 this.okAnswer();
                 this.newMessage = '';
+               
                }
              },
             
@@ -126,9 +207,10 @@ const app = Vue.createApp({
                         status: 'received'
                     }
                     this.contacts[this.selectedIndex].messages.push(message);
-                    this.scrollDownChat()
+                   
                 },1000)
              },
+             
         }
     
 
