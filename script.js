@@ -5,6 +5,7 @@ const app = Vue.createApp({
         return {
             selectedIndex: 0, 
             newMessage: '', 
+            searchContact : '',  
 
             user: {
                 name: 'Nome Utente',
@@ -177,6 +178,13 @@ const app = Vue.createApp({
             }
         },
 
+        computed: {
+            filteredContacts() {
+              return this.contacts.filter(contact => {
+                return contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
+              })
+            }
+          },
 
         methods:{
             changeCurrentIndex(index){
