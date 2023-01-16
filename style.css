@@ -64,7 +64,7 @@ i{
  }
  
  #search-chat{
-   background-color: var(--light-grey);
+   background-color: white;
  }
  
  #active-notice i {
@@ -79,9 +79,12 @@ i{
      cursor: pointer;
  }
 
- .slctd {
+ .hvr:hover {
     background-color: var(--light-grey);
-    cursor: pointer;
+ }
+
+ .selected {
+    background-color: var(--light-grey);
  }
 
  
