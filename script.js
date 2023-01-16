@@ -6,6 +6,7 @@ const app = Vue.createApp({
             selectedIndex: 0, 
             newMessage: '', 
             searchContact : '',  
+            
 
             user: {
                 name: 'Nome Utente',
@@ -178,13 +179,13 @@ const app = Vue.createApp({
             }
         },
 
-        computed: {
-            filteredContacts() {
-              return this.contacts.filter(contact => {
-                return contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
-              })
-            }
-          },
+        // computed: {
+        //     filteredContacts() {
+        //       return this.contacts.filter(contact => {
+        //         return contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
+        //       })
+        //     }
+        //   },
 
         methods:{
             changeCurrentIndex(index){
@@ -206,6 +207,8 @@ const app = Vue.createApp({
                
                }
              },
+
+            
             
              okAnswer(){
                 setTimeout (()=>{
@@ -218,6 +221,14 @@ const app = Vue.createApp({
                    
                 },1000)
              },
+
+             filterContacts(){
+                this.contacts.forEach( contact =>{
+                  contact.visible = contact.name.toLowerCase().includes(this.searchContact.toLowerCase());
+                })
+              },
+
+             
              
         }
     

@@ -76,6 +76,7 @@ i{
  
  #contact-list{
      height: 480px;
+     cursor: pointer;
  }
 
  .slctd {
